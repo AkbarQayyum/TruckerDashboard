@@ -21,6 +21,7 @@ import Review from "../Pages/Review/Review";
 import Ads from "../Pages/Ads/Ads";
 import Vehicles from "../Pages/Vehicles/Vehicles";
 import Emergency from "../Pages/Emergency/Emergency";
+import AllUsers from "../Pages/AllUsers/AllUsers";
 export const AdminRoutes = [
   {
     path: "/",
@@ -200,6 +201,12 @@ export const AdminRoutes = [
         activePage={<Emergency />}
         headerTitle={"Mechanic Emergency"}
       />
+    ),
+  },
+  {
+    path: "/users",
+    component: (
+      <UseContainer activePage={<AllUsers />} headerTitle={"Register Users"} />
     ),
   },
 ];

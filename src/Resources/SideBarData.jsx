@@ -10,6 +10,7 @@ import ElectricMopedIcon from "@mui/icons-material/ElectricMoped";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import AddAlertIcon from "@mui/icons-material/AddAlert";
+import GroupIcon from "@mui/icons-material/Group";
 export const AdminSideBarData = [
   {
     name: "Dashboard",
@@ -154,6 +155,14 @@ export const AdminSideBarData = [
     name: "Emergency",
     path: "/emergency",
     icon: <AddAlertIcon fontSize="small" />,
+    iconClosed: <ArrowDropDownIcon />,
+    iconOpened: <ArrowDropUpIcon />,
+    subitems: [],
+  },
+  {
+    name: "Register Users",
+    path: "/users",
+    icon: <GroupIcon fontSize="small" />,
     iconClosed: <ArrowDropDownIcon />,
     iconOpened: <ArrowDropUpIcon />,
     subitems: [],
