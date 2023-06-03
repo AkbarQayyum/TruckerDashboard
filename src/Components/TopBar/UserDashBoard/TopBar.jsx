@@ -180,7 +180,7 @@ const TopBar = ({ isSettings, setOpen, setOnHover }) => {
             >
               <img src={bellIcon} alt="" />
             </Box> */}
-            <Box>
+            {/* <Box>
               <Tooltip title="Open settings">
                 <Box
                   sx={{
@@ -264,7 +264,7 @@ const TopBar = ({ isSettings, setOpen, setOnHover }) => {
                   </MenuItem>
                 ))}
               </Menu>
-            </Box>
+            </Box> */}
           </Box>
         </Toolbar>
       </AppBar>

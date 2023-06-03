@@ -2,12 +2,14 @@ import React from "react";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import AnnouncementIcon from '@mui/icons-material/Announcement';
-import FireTruckIcon from '@mui/icons-material/FireTruck';
-import MopedIcon from '@mui/icons-material/Moped';
-import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
-import ElectricMopedIcon from '@mui/icons-material/ElectricMoped';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import AnnouncementIcon from "@mui/icons-material/Announcement";
+import FireTruckIcon from "@mui/icons-material/FireTruck";
+import ReviewsIcon from "@mui/icons-material/Reviews";
+import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
+import ElectricMopedIcon from "@mui/icons-material/ElectricMoped";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import AddAlertIcon from "@mui/icons-material/AddAlert";
 export const AdminSideBarData = [
   {
     name: "Dashboard",
@@ -26,14 +28,9 @@ export const AdminSideBarData = [
     iconOpened: <ArrowDropUpIcon />,
     subitems: [
       {
-        name: "Truck Driver",
+        name: "Attendance",
         path: "/driverAttendance",
         icon: <FireTruckIcon fontSize="small" />,
-      },
-      {
-        name: "Rikshaw Driver",
-        path: "/rikshawDriverAttendance",
-        icon: <MopedIcon fontSize="small" />,
       },
     ],
   },
@@ -55,100 +52,15 @@ export const AdminSideBarData = [
   },
   {
     name: "Builty Booking",
-    path: "/cottonBooking",
+    path: "/bookings",
     icon: <LocalShippingIcon fontSize="small" />,
     iconClosed: <ArrowDropDownIcon />,
     iconOpened: <ArrowDropUpIcon />,
     subitems: [
       {
-        name: "Cotton Booking",
-        path: "/cottonBooking",
+        name: "Bookings",
+        path: "/bookings",
         icon: <FireTruckIcon fontSize="small" />,
-      },
-      {
-        name: "Sooter Booking",
-        path: "/sooterBooking",
-        icon: <FireTruckIcon fontSize="small" />,
-      },
-      {
-        name: "Clothes Booking",
-        path: "/clothBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Scrab Booking",
-        path: "/scrabBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Oil Booking",
-        path: "/oilBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Machinery Booking",
-        path: "/machineBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Wanda Booking",
-        path: "/wandaBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Seeds Booking",
-        path: "/seedBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Vegetables/Rice Booking",
-        path: "/vegetableBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Hardware Booking",
-        path: "/hardwareBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Animal Booking",
-        path: "/animalBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Poltary Booking",
-        path: "/poltryBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Electronics Booking",
-        path: "/electronicBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "House Things Booking",
-        path: "/housethingsBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Furniture Booking",
-        path: "/furnitureBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Other Booking",
-        path: "/othersBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Nursary Booking",
-        path: "/nursryBooking",
-        icon: <MopedIcon fontSize="small" />,
-      },
-      {
-        name: "Cement/Rait Booking",
-        path: "/cementBooking",
-        icon: <MopedIcon fontSize="small" />,
       },
     ],
   },
@@ -207,17 +119,41 @@ export const AdminSideBarData = [
     ],
   },
   {
-    name: "Truck Booking",
+    name: "Goods Transport",
     path: "/trucksBookings",
-    icon: <DashboardIcon fontSize="small" />,
+    icon: <LocalShippingIcon fontSize="small" />,
     iconClosed: <ArrowDropDownIcon />,
     iconOpened: <ArrowDropUpIcon />,
     subitems: [],
   },
   {
-    name: "Booking",
-    path: "/Booking",
-    icon: <DashboardIcon fontSize="small" />,
+    name: "Reviews",
+    path: "/reviews",
+    icon: <ReviewsIcon fontSize="small" />,
+    iconClosed: <ArrowDropDownIcon />,
+    iconOpened: <ArrowDropUpIcon />,
+    subitems: [],
+  },
+  {
+    name: "Ads",
+    path: "/ads",
+    icon: <CampaignIcon fontSize="small" />,
+    iconClosed: <ArrowDropDownIcon />,
+    iconOpened: <ArrowDropUpIcon />,
+    subitems: [],
+  },
+  {
+    name: "Vehicles",
+    path: "/vehicles",
+    icon: <LocalShippingIcon fontSize="small" />,
+    iconClosed: <ArrowDropDownIcon />,
+    iconOpened: <ArrowDropUpIcon />,
+    subitems: [],
+  },
+  {
+    name: "Emergency",
+    path: "/emergency",
+    icon: <AddAlertIcon fontSize="small" />,
     iconClosed: <ArrowDropDownIcon />,
     iconOpened: <ArrowDropUpIcon />,
     subitems: [],
