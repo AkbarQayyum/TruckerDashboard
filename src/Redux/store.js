@@ -3,7 +3,8 @@ import LoginSlice from "./Slice/LoginSlice";
 import UserSlice from "./Slice/UserSlice";
 import SellingVehicleSlice from "./Slice/SellingVehicleSlice";
 import ReviewSlice from "./Slice/ReviewSlice";
-import  DriverAttendanceSlice  from "./Slice/DriverAttendaceSlice";
+import DriverAttendanceSlice from "./Slice/DriverAttendaceSlice";
+import TransporterSlice from "./Slice/transporterslice";
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     SellingVehicleSlice: SellingVehicleSlice,
     ReviewSlice: ReviewSlice,
     driverSlice: DriverAttendanceSlice,
+    TransporterSlice: TransporterSlice,
   },
 });
