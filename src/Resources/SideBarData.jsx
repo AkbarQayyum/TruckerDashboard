@@ -5,7 +5,6 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import AnnouncementIcon from "@mui/icons-material/Announcement";
 import FireTruckIcon from "@mui/icons-material/FireTruck";
 import ReviewsIcon from "@mui/icons-material/Reviews";
-import AccessibilityNewIcon from "@mui/icons-material/AccessibilityNew";
 import ElectricMopedIcon from "@mui/icons-material/ElectricMoped";
 import CampaignIcon from "@mui/icons-material/Campaign";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -35,22 +34,7 @@ export const AdminSideBarData = [
       },
     ],
   },
-  {
-    name: "Labour Booking",
-    path: "/labourBooking",
-    icon: <AccessibilityNewIcon fontSize="small" />,
-    iconClosed: <ArrowDropDownIcon />,
-    iconOpened: <ArrowDropUpIcon />,
-    subitems: [],
-  },
-  {
-    name: "Rikshaw Booking",
-    path: "/rikshawBooking",
-    icon: <ElectricMopedIcon fontSize="small" />,
-    iconClosed: <ArrowDropDownIcon />,
-    iconOpened: <ArrowDropUpIcon />,
-    subitems: [],
-  },
+ 
   {
     name: "Builty Booking",
     path: "/bookings",

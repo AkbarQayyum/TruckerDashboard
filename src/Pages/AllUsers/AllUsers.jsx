@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { makeStyles } from "@mui/styles";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,9 @@ import {
   getRegisterUsers,
 } from "../../Redux/Slice/UserSlice";
 import Loader from "../../Components/Loader/Loader";
+import { ApproveUser } from "../../API/users/ApproveUser";
+import { DeleteUser } from "../../API/users/DeleteUser";
+import { SnackBarContext } from "../../Context/SnackBarContext/SnackBarContext";
 const useStyles = makeStyles((theme) => {
   return {
     header: {
@@ -25,6 +28,26 @@ function AllUsers() {
   const { status, user } = useSelector(getRegisterUsers);
   const [rows, setrows] = useState([]);
   const dispatch = useDispatch();
+  const { setsnackBarData } = useContext(SnackBarContext);
+
+  const handleApproved = async (obj) => {
+    console.log(obj);
+    obj = { id: obj?.ID, userid: obj?.userid };
+    let res = await ApproveUser(obj);
+    console.log(res);
+    setsnackBarData(res?.snackbarData);
+    dispatch(allRegisterUsers());
+  };
+
+  const handleDelete = async (obj) => {
+    console.log(obj);
+    obj = { id: obj?.ID };
+    let res = await DeleteUser(obj);
+    console.log(res);
+    setsnackBarData(res?.snackbarData);
+    dispatch(allRegisterUsers());
+  };
+
   const columns = [
     { field: "id", headerName: "Sr #", width: 90, headerClassName: header },
     {
@@ -60,14 +83,29 @@ function AllUsers() {
     {
       field: "Action",
       headerName: "Action",
-      width: 110,
+      width: 250,
       headerClassName: header,
       renderCell: (cellval) => {
-        if (cellval?.row?.isverified === false) {
+        if (cellval?.row?.name !== "admin") {
           return (
-            <Button variant="contained" color="success">
-              Approve
-            </Button>
+            <Box sx={{display:'flex',gap:'10px'}}>
+              {cellval?.row?.isverified === false ? (
+                <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => handleApproved(cellval?.row)}
+                >
+                  Approve
+                </Button>
+              ) : null}
+              <Button
+                variant="contained"
+                color="error"
+                onClick={() => handleDelete(cellval?.row)}
+              >
+                Delete
+              </Button>
+            </Box>
           );
         }
       },
@@ -89,6 +127,7 @@ function AllUsers() {
           password: "******",
           phone: data?.phone,
           isverified: data?.isEmailVerified,
+          ID: data?._id,
         });
       });
       setrows(temp);

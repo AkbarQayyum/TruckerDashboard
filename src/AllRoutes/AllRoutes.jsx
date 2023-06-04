@@ -3,8 +3,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import UseContainer from "../Pages/UserContainer/UserContainer";
 import LoginContent from "../Pages/Login/LoginContent";
 import TruckDriverAttendance from "../Pages/DriverAttendance/TruckDriverAttendance";
-import LabourBooking from "../Pages/LabourBooking/LabourBooking";
-import RikshawBooking from "../Pages/RikshawBooking/RikshawBooking";
+
 import TruckBooking from "../Pages/TruckBooking/TrucksBookings";
 import CottonBooking from "../Pages/BiltyBooking/CottonBooking";
 import MechanicReg from "../Pages/Registration/MechanicReg";
@@ -44,25 +43,7 @@ export const AdminRoutes = [
   },
 
   ,
-  {
-    path: "/labourBooking",
-    component: (
-      <UseContainer
-        activePage={<LabourBooking />}
-        headerTitle={"Labour Booking"}
-      />
-    ),
-  },
 
-  {
-    path: "/rikshawBooking",
-    component: (
-      <UseContainer
-        activePage={<RikshawBooking />}
-        headerTitle={"Rikshaw Booking"}
-      />
-    ),
-  },
 
   {
     path: "/truckBooking",
